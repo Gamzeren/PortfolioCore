@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@await Component.InvokeAsync("_DefaultHeadComponentPartial")
+
+<body class="index-page">
+    @await Component.InvokeAsync("_DefaultSidebarComponentPartial")
+
+    <main class="main">
+        @await Component.InvokeAsync("_DefaultFeatureComponentPartial")
+        <!-- Hero Section -->
+        
+        <!-- About Section -->
+        @await Component.InvokeAsync("_DefaultHakkımdaComponentPartial")
+        <!-- /About Section -->
+        <!-- Stats Section -->
+        @await Component.InvokeAsync("_DefaultStatisticsComponentPartial")
+       <!-- /Stats Section -->
+        <!-- Skills Section -->
+        @await Component.InvokeAsync("_DefaultSkillComponentPartial")
+       <!-- /Skills Section -->
+        <!-- Resume Section -->
+        <section id="resume" class="resume section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Eğitim Hayatım & Deneyimlerim</h2>
+                <p>Aşağıdan Eğitim hayatım ve deneyimlerim ile ilgili bilgilere ulaşabilirsiniz</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        @await Component.InvokeAsync("_DefaultEducationComponentPartial")
+                        <!-- Edn Resume Item -->
+                    </div>
+
+                    @await Component.InvokeAsync("_DefaultExperienceComponentPartial")
+                </div>
+
+            </div>
+
+        </section><!-- /Resume Section -->
+        <!-- Portfolio Section -->
+        @await Component.InvokeAsync("_DefaultPortfolioComponentPartial")
+        <!-- /Portfolio Section -->
+        <!-- Services Section -->
+        @await Component.InvokeAsync("_DefaultServiceComponentPartial")
+       <!-- /Services Section -->
+        <!-- Testimonials Section -->
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+        
+        <!-- Contact Section -->
+        @await Component.InvokeAsync("_DefaultContactComponentPartial")
+       <!-- /Contact Section -->
+
+    </main>
+
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
+   
+
+</body>
+
+</html>
